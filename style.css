@@ -1,0 +1,114 @@
+
+/* General Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: space-between; /* Space between elements */
+  max-width: 1200px; /* Set max width for the layout */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  gap: 20px; /* Adds space between columns */
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px; /* Adjust width as needed */
+  background-color: rgb (0,0,0); /* Dark background */
+  color: #ffffff; /* Text color */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Arrange links vertically */
+  gap: 20px; /* Space between items */
+}
+
+a {
+  position: relative; /* Needed to position the hover effect inside each link */
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 5px;
+      transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.sidebar a {
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  color: rgb(92, 92, 94); /* Change the color on hover */
+  border-radius: 50px;
+}
+
+.logo {
+  width: 35px;
+  height: 30px;
+  fill: white;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white; /* Change color as needed */
+  font-size: 16px;
+}
+
+.icon {
+  width: 16px; /* Adjust size */
+  height: 16px;
+  margin-right: 8px; /* Adds space between the icon and the text */
+  fill: currentColor; /* Makes the SVG match the text color */
+}
+
+.icon-link:hover {
+  color: rgb(92, 92, 94); /* Change the color on hover */
+  border-radius: 50px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0; /* Ensures content doesn't force sidebar alignment issues */
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 50vw; /* Adjust width as needed */
+  background-color: rgb (0,0,0); /* Dark background */
+  color: #ffffff; /* Text color */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Arrange links vertically */
+  box-sizing: border-box;
+  gap: 20px; /* Space between items */
+  z-index: 0;
+
+}
+
+.username {
+  width: 583px;
+  height:45px;
+}
+
+
+
