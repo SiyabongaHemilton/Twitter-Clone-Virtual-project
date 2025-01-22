@@ -64,6 +64,7 @@ a {
   width: 35px;
   height: 30px;
   fill: white;
+  margin-left: 10px;
 }
 
 .icon-link {
@@ -111,4 +112,7 @@ a {
 }
 
 
-
+nav a {
+ width: 10px;
+ height: 10px;
+}
