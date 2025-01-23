@@ -1,118 +1,136 @@
-
-/* General Reset*/
-* {
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-  display: flex;
-  min-height: 100vh;
-  background-color: rgb(0, 0, 0);
-  color: #fff;
-  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .container {
-  display: flex; /* Flexbox for horizontal layout */
-  justify-content: space-between; /* Space between elements */
-  max-width: 1200px; /* Set max width for the layout */
-  margin: 0 auto; /* Center the container */
-  padding: 20px;
-  gap: 20px; /* Adds space between columns */
+  display: grid;
+  grid-template-columns: 250px 1fr 350px;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 250px; /* Adjust width as needed */
-  background-color: rgb (0,0,0); /* Dark background */
-  color: #ffffff; /* Text color */
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Arrange links vertically */
-  gap: 20px; /* Space between items */
+.sidebar, .right-sidebar {
+  background-color: #000000;
+  padding: 15px;
+  border-right: 1px solid #e6ecf0;
+  color:fill;
 }
 
-a {
-  position: relative; /* Needed to position the hover effect inside each link */
-      text-decoration: none;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      padding: 5px 10px;
-      display: inline-block;
-      border-radius: 5px;
-      transition: color 0.3s ease; /* Smooth color change on hover */
+.sidebar ul, .right-sidebar ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.sidebar a {
-  color: white;
+.sidebar li {
+  padding: 10px 0;
+  font-size: 18px;
   cursor: pointer;
+  
 }
 
-.sidebar a:hover {
-  color: rgb(92, 92, 94); /* Change the color on hover */
-  border-radius: 50px;
+.fas {
+  margin:0 20px 0 16px;
 }
-
-.logo {
-  width: 35px;
-  height: 30px;
-  fill: white;
-  margin-left: 10px;
+.Grok {
+  fill: #ffffff;
+  width: 18px;
+  height:18px;
+  transform: translateY(3px);   /* nudge the svg down a bit */
+  margin:0 20px 0 16px;
 }
-
-.icon-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white; /* Change color as needed */
-  font-size: 16px;
-}
-
-.icon {
-  width: 16px; /* Adjust size */
-  height: 16px;
-  margin-right: 8px; /* Adds space between the icon and the text */
-  fill: currentColor; /* Makes the SVG match the text color */
-}
-
-.icon-link:hover {
-  color: rgb(92, 92, 94); /* Change the color on hover */
-  border-radius: 50px;
-}
-
 .main-content {
-  flex: 1;
-  min-width: 0; /* Ensures content doesn't force sidebar alignment issues */
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 50vw; /* Adjust width as needed */
-  background-color: rgb (0,0,0); /* Dark background */
-  color: #ffffff; /* Text color */
-  padding: 20px;
+  padding: 15px;
+}
+
+.main-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
   display: flex;
-  flex-direction: column; /* Arrange links vertically */
-  box-sizing: border-box;
-  gap: 20px; /* Space between items */
-  z-index: 0;
+  flex-direction: row;
+  width: 598px;
+  height: 53;
+  font-size: small;
+}         /* this is the 'For you' and 'Following' div */
 
+.FYM {
+  width:293px;
+  height:53px;
+}               /* This is the For you div */
+
+.FollowingDiv {
+  width: 306px;
+  height: 53px;
+}               /* This is the Following div */
+
+
+.anchorFY {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 260px;
+  height: 53px;
 }
 
-.username {
-  width: 583px;
-  height:45px;
+.FY {
+  width:52px;
+  height: 20px;
+  padding-left: 100px;
+  
 }
 
+.FG {
+  width:52px;
+  height: 20px;
+  padding-left: 100px;
+}
+.tweet {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-nav a {
- width: 10px;
- height: 10px;
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.tweet-content {
+  flex: 1;
+}
+
+.tweet-content p {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.right-sidebar .trends {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar .trends h3 {
+  margin-bottom: 10px;
+}
+
+.right-sidebar .trends ul li {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #1da1f2;
+  cursor: pointer;
 }
